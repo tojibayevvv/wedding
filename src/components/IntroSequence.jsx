@@ -6,6 +6,7 @@ import "./IntroSequence.css";
 
 const CROSSFADE_MS = 650;
 const HOLD_MS = 550;
+const VIDEO_END_HOLD_MS = 1500;
 
 export default function IntroSequence({ active, onComplete }) {
   const videoRef = useRef(null);
@@ -18,7 +19,7 @@ export default function IntroSequence({ active, onComplete }) {
     setFaded(true);
     const t1 = setTimeout(() => {
       onComplete();
-    }, CROSSFADE_MS + HOLD_MS);
+    }, CROSSFADE_MS + HOLD_MS + VIDEO_END_HOLD_MS);
     timers.current.push(t1);
   };
 
