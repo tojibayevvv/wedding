@@ -23,6 +23,10 @@ export default function MusicController() {
     const audio = audioRef.current;
     if (!audio) return;
 
+    if (hasStarted && isEnabled) {
+      return;
+    }
+
     try {
       audio.src = MUSIC_SRC;
       audio.load();
@@ -33,24 +37,29 @@ export default function MusicController() {
       setIsEnabled(true);
     } catch (error) {
       console.error("Could not start music", error);
-      setHasStarted(true);
+      setHasStarted(false);
       setIsEnabled(false);
     }
   };
 
   useEffect(() => {
-    const handleFirstInteraction = () => {
-      if (!hasStarted) {
-        startMusic();
+    let isMounted = true;
+
+    const handleFirstInteraction = async () => {
+      if (!hasStarted && isMounted) {
+        await startMusic();
       }
     };
 
     window.addEventListener("pointerdown", handleFirstInteraction, { passive: true });
     window.addEventListener("keydown", handleFirstInteraction, { passive: true });
+    window.addEventListener("touchstart", handleFirstInteraction, { passive: true });
 
     return () => {
+      isMounted = false;
       window.removeEventListener("pointerdown", handleFirstInteraction);
       window.removeEventListener("keydown", handleFirstInteraction);
+      window.removeEventListener("touchstart", handleFirstInteraction);
     };
   }, [hasStarted]);
 

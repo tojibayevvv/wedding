@@ -19,10 +19,11 @@ export const weddingContent = {
   },
 
   invitation: {
-    eyebrow: "Hurmatli mehmon",
+    eyebrow: "Mening sevimli dugonam!",
     paragraphs: [
-      "Hayotimizdagi eng muhim kunlardan biri — er-xotin bo'lib, yangi bir yo'lni boshlaymiz. Shu quvonchli kunda siz aziz mehmonimiz sifatida yonimizda bo'lishingizni istardik.",
-      "Sizning duo va tilaklaringiz biz uchun eng qimmatli sovg'a. Muhabbat va baxt to'la ushbu kechada davra to'la baxtimizga sherik bo'lishingizni so'raymiz.",
+      "Hayotimning eng muhim va takrorlanmas kunida — nikoh to'yimda siz azizlarni yonimda ko'rishdan cheksiz baxtiyor bo'laman.",
+      "Muxabbat va quvonchga to'la ushbu shirin damlarni birgalikda baham ko'raylik. Mening eng baxtli kunimda menga hamroh bo'ling!",
+      "Tashrifingizni intizorlik bilan kutaman."
     ],
     signature: "Anvar & Sabrina",
   },
@@ -32,8 +33,8 @@ export const weddingContent = {
     month: "IYUL",
     year: "2026",
     weekday: "Payshanba",
-    time: "17:00",
-    venue: "Shodiyona",
-    address: "Amir Temur ko'chasi 18A uy",
+    time: "10:00",
+    venue: "Sofiya to'yxonasi",
+    address: "Mo'ljal: 9 etajka dom ro'parasi",
   },
 };
