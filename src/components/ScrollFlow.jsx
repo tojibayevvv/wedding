@@ -2,6 +2,7 @@ import HeroSection from "./HeroSection";
 import InvitationSection from "./InvitationSection";
 import DateSection from "./DateSection";
 import "./ScrollFlow.css";
+import Footer from "./Footer";
 
 export default function ScrollFlow() {
   return (
@@ -9,6 +10,7 @@ export default function ScrollFlow() {
       <HeroSection />
       <InvitationSection />
       <DateSection />
+      <Footer/>
     </div>
   );
 }

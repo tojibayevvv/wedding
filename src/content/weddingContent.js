@@ -24,16 +24,16 @@ export const weddingContent = {
       "Hayotimizdagi eng muhim kunlardan biri — er-xotin bo'lib, yangi bir yo'lni boshlaymiz. Shu quvonchli kunda siz aziz mehmonimiz sifatida yonimizda bo'lishingizni istardik.",
       "Sizning duo va tilaklaringiz biz uchun eng qimmatli sovg'a. Muhabbat va baxt to'la ushbu kechada davra to'la baxtimizga sherik bo'lishingizni so'raymiz.",
     ],
-    signature: "[Kelin ismi] & [Kuyov ismi]",
+    signature: "Anvar & Sabrina",
   },
 
   event: {
-    day: "26",
-    month: "SENTABR",
+    day: "30",
+    month: "IYUL",
     year: "2026",
-    weekday: "Shanba",
+    weekday: "Payshanba",
     time: "17:00",
-    venue: "[To'yxona nomi]",
-    address: "[Manzil, shahar]",
+    venue: "Shodiyona",
+    address: "Amir Temur ko'chasi 18A uy",
   },
 };

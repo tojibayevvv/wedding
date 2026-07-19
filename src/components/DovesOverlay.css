@@ -12,7 +12,7 @@
   width: 8vw;
   min-width: 44px;
   max-width: 90px;
-  opacity: var(--opacity, 0.2);
+  opacity: var(--opacity, 0.1);
   animation-name: dove-glide-ltr;
   animation-duration: var(--duration, 30s);
   animation-delay: var(--delay, 0s);
