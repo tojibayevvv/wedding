@@ -1,0 +1,44 @@
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.scroll-cue__label {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.scroll-cue--light {
+  color: var(--ivory);
+}
+
+.scroll-cue--dark {
+  color: var(--ink);
+}
+
+.scroll-cue__icon {
+  animation: cue-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes cue-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue__icon {
+    animation: none;
+  }
+}

@@ -1,0 +1,116 @@
+/*
+  DESIGN NOTES (kept here on purpose so future edits stay consistent)
+  ---------------------------------------------------------------
+  Narrative arc: dusk sky (mystery) -> cinematic memory (video) ->
+  freeze-frame -> ivory letter (an intimate, physical keepsake) ->
+  dusk again for the date, bookending the piece. Doves are the
+  throughline: they only fly in the two "sky" sections.
+
+  Palette avoids the generic cream+terracotta / near-black+neon /
+  newspaper defaults — it's a dusk gradient (plum -> dusky rose) with
+  antique gold and warm ivory, matched to Uzbek taklifnoma tradition.
+*/
+
+:root {
+  /* ---- Color tokens ---- */
+  --dusk-deep: #241a35;
+  --dusk-mid: #EAD6B5;
+  --dusk-rose: #FCF7F2;
+  --ivory: #faf3e7;
+  --gold: #c8a24f;
+  --gold-soft: rgba(200, 162, 79, 0.4);
+  --ink: #2b2320;
+  --mist: #efe1c9;
+  --white-soft: #fdf9f2;
+
+  /* ---- Type ---- */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+
+  --fs-hero: clamp(3.2rem, 15vw, 6.5rem);
+  --fs-h1: clamp(2.1rem, 8vw, 3.4rem);
+  --fs-h2: clamp(1.5rem, 5.5vw, 2.1rem);
+  --fs-body: clamp(1rem, 2.8vw, 1.15rem);
+  --fs-caption: 0.78rem;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--dusk-deep);
+  overflow: hidden; /* default locked; unlocked via .app--scrollable */
+}
+
+body.app--scrollable {
+  overflow: auto;
+}
+
+#root {
+  height: 100%;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--gold-soft);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

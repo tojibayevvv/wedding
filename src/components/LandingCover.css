@@ -1,0 +1,140 @@
+.landing-cover {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: radial-gradient(
+      120% 90% at 50% 15%,
+      var(--dusk-mid) 0%,
+      transparent 60%
+    ),
+    linear-gradient(185deg, var(--dusk-deep) 0%, var(--dusk-mid) 55%, var(--dusk-rose) 130%);
+  overflow: hidden;
+  appearance: none;
+  text-align: center;
+}
+
+.landing-cover__glow {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 480px;
+  max-height: 480px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--gold-soft) 0%, transparent 70%);
+  opacity: 0.35;
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.landing-cover__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.landing-cover__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--fs-hero);
+  line-height: 1;
+  color: var(--white-soft);
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 40px rgba(200, 162, 79, 0.25);
+}
+
+.landing-cover__divider {
+  margin-top: 22px;
+  opacity: 0.85;
+}
+
+.landing-cover__tap-hint {
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.landing-cover__ripple {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ripple-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  animation: ripple-out 2.6s ease-out infinite;
+}
+
+.ripple-ring--delayed {
+  animation-delay: 1.3s;
+}
+
+.ripple-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.landing-cover__hint-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mist);
+  animation: hint-breathe 2.6s ease-in-out infinite;
+}
+
+@keyframes ripple-out {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes hint-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ripple-ring,
+  .landing-cover__hint-text {
+    animation: none;
+  }
+}

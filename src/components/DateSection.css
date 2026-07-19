@@ -1,0 +1,89 @@
+.date-section {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  min-height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 85%, var(--dusk-mid) 0%, transparent 60%),
+    linear-gradient(200deg, var(--dusk-rose) 0%, var(--dusk-mid) 45%, var(--dusk-deep) 100%);
+  padding: 10vh 8vw;
+}
+
+.date-section__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.date-section__medallion {
+  width: clamp(150px, 34vw, 210px);
+  height: clamp(150px, 34vw, 210px);
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  outline: 1px solid var(--gold-soft);
+  outline-offset: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.date-section__day {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 12vw, 4.5rem);
+  line-height: 1;
+  color: var(--white-soft);
+  font-weight: 500;
+}
+
+.date-section__month {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.date-section__weekday {
+  margin: 26px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-h2);
+  color: var(--mist);
+}
+
+.date-section__divider {
+  margin: 22px 0;
+}
+
+.date-section__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-section__detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-body);
+  color: var(--white-soft);
+  font-weight: 300;
+}
+
+.date-section__address {
+  font-size: var(--fs-caption);
+  color: var(--mist);
+  opacity: 0.75;
+  letter-spacing: 0.03em;
+}

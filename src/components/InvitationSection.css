@@ -1,0 +1,53 @@
+.invitation-section {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  min-height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ivory);
+  padding: 14vh 8vw;
+}
+
+.invitation-section__inner {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.invitation-section__divider {
+  margin-bottom: 28px;
+}
+
+.invitation-section__eyebrow {
+  margin: 0 0 22px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-h2);
+  color: var(--ink);
+}
+
+.invitation-section__text {
+  margin: 0 0 20px;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: 1.85;
+  color: var(--ink);
+  opacity: 0.88;
+}
+
+.invitation-section__signature {
+  margin: 18px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,34 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+}
+
+.hero-section__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-section__scrim {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30%;
+  background: linear-gradient(to top, rgba(20, 14, 28, 0.55), transparent);
+  pointer-events: none;
+}
+
+.hero-section__cue {
+  position: absolute;
+  left: 50%;
+  bottom: calc(6% + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+}

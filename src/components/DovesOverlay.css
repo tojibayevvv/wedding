@@ -1,0 +1,95 @@
+.doves-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dove-wrapper {
+  position: absolute;
+  left: 0;
+  width: 8vw;
+  min-width: 44px;
+  max-width: 90px;
+  opacity: var(--opacity, 0.2);
+  animation-name: dove-glide-ltr;
+  animation-duration: var(--duration, 30s);
+  animation-delay: var(--delay, 0s);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.dove-wrapper.dove-rtl {
+  animation-name: dove-glide-rtl;
+}
+
+.dove-flap {
+  animation: wing-flap var(--flap-duration, 1s) ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.dove-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes dove-glide-ltr {
+  0% {
+    transform: translate(-15vw, 0) scale(var(--scale, 0.6));
+  }
+  20% {
+    transform: translate(8vw, -4vh) scale(var(--scale, 0.6));
+  }
+  40% {
+    transform: translate(35vw, 2vh) scale(var(--scale, 0.6));
+  }
+  60% {
+    transform: translate(65vw, -3vh) scale(var(--scale, 0.6));
+  }
+  80% {
+    transform: translate(92vw, 3vh) scale(var(--scale, 0.6));
+  }
+  100% {
+    transform: translate(118vw, 0) scale(var(--scale, 0.6));
+  }
+}
+
+@keyframes dove-glide-rtl {
+  0% {
+    transform: translate(118vw, 0) scale(var(--scale, 0.6)) scaleX(-1);
+  }
+  20% {
+    transform: translate(92vw, 3vh) scale(var(--scale, 0.6)) scaleX(-1);
+  }
+  40% {
+    transform: translate(65vw, -3vh) scale(var(--scale, 0.6)) scaleX(-1);
+  }
+  60% {
+    transform: translate(35vw, 2vh) scale(var(--scale, 0.6)) scaleX(-1);
+  }
+  80% {
+    transform: translate(8vw, -4vh) scale(var(--scale, 0.6)) scaleX(-1);
+  }
+  100% {
+    transform: translate(-15vw, 0) scale(var(--scale, 0.6)) scaleX(-1);
+  }
+}
+
+@keyframes wing-flap {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.72);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doves-overlay {
+    display: none;
+  }
+}
