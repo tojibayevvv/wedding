@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
 /*
   DESIGN NOTES (kept here on purpose so future edits stay consistent)
   ---------------------------------------------------------------
@@ -26,6 +28,7 @@
   /* ---- Type ---- */
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-body: "Jost", "Segoe UI", sans-serif;
+  --font-tangerine: "Tangerine", cursive;
 
   --fs-hero: clamp(3.2rem, 15vw, 6.5rem);
   --fs-h1: clamp(2.1rem, 8vw, 3.4rem);

@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import LandingCover from "./components/LandingCover";
 import IntroSequence from "./components/IntroSequence";
 import ScrollFlow from "./components/ScrollFlow";
+import MusicController from "./components/MusicController";
 
 // cover -> intro -> scroll
 export default function App() {
@@ -25,6 +26,8 @@ export default function App() {
       <IntroSequence active={appState === "intro"} onComplete={handleIntroComplete} />
 
       {appState === "scroll" && <ScrollFlow />}
+
+      <MusicController />
     </>
   );
 }
