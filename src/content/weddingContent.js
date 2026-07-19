@@ -25,7 +25,7 @@ export const weddingContent = {
       "Muxabbat va quvonchga to'la ushbu shirin damlarni birgalikda baham ko'raylik. Mening eng baxtli kunimda menga hamroh bo'ling!",
       "Tashrifingizni intizorlik bilan kutaman."
     ],
-    signature: "Anvar & Sabrina",
+    signature: "Anvarbek & Sabrina",
   },
 
   event: {
@@ -33,7 +33,7 @@ export const weddingContent = {
     month: "IYUL",
     year: "2026",
     weekday: "Payshanba",
-    time: "10:00",
+    time: "11:00",
     venue: "Sofiya to'yxonasi",
     address: "Mo'ljal: 9 etajka dom ro'parasi",
   },
